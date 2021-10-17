@@ -1,0 +1,16 @@
+# Server
+# ──────
+mpd_host = "~/.local/state/mpd/socket"
+mpd_port = "6600"
+mpd_music_dir = "~/Music"
+
+# Behaviour
+# ─────────
+ncmpcpp_directory = "~/.cache/ncmpcpp"
+lyrics_directory = "~/.cache/lyrics"
+message_delay_time = 1
+allow_for_physical_item_deletion = "no"
+media_library_primary_tag = album_artist
+media_library_albums_split_by_date = yes
+media_library_hide_album_dates = no
+
