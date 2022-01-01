@@ -15,7 +15,7 @@ font:
     family: hack
 
     # The `style` can be specified to pick a specific face.
-    style: Regular
+    style: Bold
 
   # Bold font face
   bold:
@@ -51,7 +51,7 @@ font:
     style: Bold Italic 
 
   # Font size
-  size: 14.0
+  size: 12.0
 
   # Default colors
   primary:
@@ -81,7 +81,8 @@ font:
     magenta: '#d3869b'
     cyan: '#8ec07c'
     white: '#ebdbb2'
-background_opacity: 0.5
+
+background_opacity: 0.7
 theme: Gruvbox-Dark
 shape: Block
 blinking: Off
