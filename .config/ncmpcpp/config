@@ -1,16 +1,97 @@
+# ------------------------------------ 
+# //////////////
 # Server
-# ──────
+# /////////////
 mpd_host = "~/.local/state/mpd/socket"
 mpd_port = "6600"
 mpd_music_dir = "~/Music"
 
-# Behaviour
-# ─────────
+# ///////////////
+# Behavior - Display 
+# ///////////////
+
 ncmpcpp_directory = "~/.cache/ncmpcpp"
 lyrics_directory = "~/.cache/lyrics"
-message_delay_time = 1
+message_delay_time = 0
 allow_for_physical_item_deletion = "no"
 media_library_primary_tag = album_artist
 media_library_albums_split_by_date = yes
 media_library_hide_album_dates = no
+playlist_show_remaining_time = yes
+playlist_shorten_total_times = no
+playlist_separate_albums = no
+header_text_scrolling = yes
+cyclic_scrolling = yes
+centered_cursor = yes
+autocenter_mode = yes
+display_volume_level = yes
+display_bitrate = yes
+display_remaining_time = yes
+titles_visibility = yes
+clock_display_seconds = yes 
+lines_scrolled = 1
+startup_screen = media_library
+startup_slave_screen = "playlist" 
+startup_slave_screen_focus = no
 
+header_visibility = yes
+
+# ////////////
+# Display Modes
+# ////////////
+
+playlist_editor_display_mode = "columns"
+search_engine_display_mode = "columns"
+browser_display_mode = "columns"
+playlist_display_mode = "columns"
+user_interface = "alternative"
+
+# ////////////
+# Song List - Current Item
+# ////////////
+
+song_columns_list_format = "(2f)[20]{} (25)[8]{t} (20)[7]{a} (07)[7]{b} (6f)[25]{y} (7f)[5]{lr}"
+current_item_inactive_column_prefix = $(yellow)$r
+current_item_prefix = $(blue)$r
+
+# ////////////
+# Visualizer
+# ////////////
+
+visualizer_fps = 60
+visualizer_autoscale = yes
+visualizer_spectrum_smooth_look = no
+visualizer_spectrum_dft_size = 1
+visualizer_spectrum_hz_min = 20
+visualizer_spectrum_hz_max = 24000
+visualizer_spectrum_gain = 1.0
+visualizer_in_stereo = yes
+locked_screen_width_part = 50
+visualizer_output_name = mpd_fifo
+visualizer_type = spectrum
+visualizer_look = ▮●
+visualizer_color = 47, 83, 119, 155, 191, 227, 221, 215, 209, 203, 197, 161
+
+# ////////////
+# Colors 
+# ///////////
+
+colors_enabled = yes
+color1 = 2
+color2 = 2
+empty_tag_color = 2
+volume_color = 3
+state_line_color = 7
+main_window_color = 8
+header_window_color = 5
+progressbar_color = 3
+progressbar_elapsed_color = 6
+statusbar_color = 7
+statusbar_time_color = 3
+player_state_color = 3
+window_border_color = 8
+active_window_border = 8
+state_flags_color = 6
+alternative_ui_separator_color = 2
+discard_colors_if_item_is_selected = yes
+# ------------------------------------ 
