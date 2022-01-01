@@ -1,7 +1,6 @@
-#
-# ~/.bashrc
-#
-
+# --------------------------- #
+# --- Discoople's .bashrc --- #
+# --------------------------- #
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
@@ -15,7 +14,7 @@ export VISUAL='nano'
 
 RED="\[$(tput setaf 196)\]"
 RESET="\[$(tput sgr0)\]"
-PS1="${RED} =]: ${RESET}"
+PS1="${RED} >]: ${RESET}"
 
 if [ -d "$HOME/.bin" ] ;
   then PATH="$HOME/.bin:$PATH"
@@ -30,9 +29,6 @@ bind "set completion-ignore-case on"
 
 #list
 alias ls='ls --color=auto'
-alias la='ls -a'
-alias ll='ls -la'
-alias l='ls'
 alias l.="ls -A | egrep '^\.'"
 
 
@@ -153,27 +149,8 @@ alias rmgitcache="rm -r ~/.cache/git"
 #moving your personal files and folders from /personal to ~
 alias personal='cp -Rf /personal/* ~'
 
-#create a file called .bashrc-personal and put all your personal aliases
-#in there. They will not be overwritten by skel.
-
 [[ -f ~/.bashrc-personal ]] && . ~/.bashrc-personal
 
-# reporting tools - install when not installed
-# install neofetch
-# neofetch
-# install screenfetch
-#screenfetch
-# install ufetch-git
-#ufetch
-# install ufetch-arco-git
-#ufetch-arco
-# install arcolinux-paleofetch-git
-#paleofetch
-# install alsi
-#alsi
-# install arcolinux-bin-git - standard on ArcoLinux isos (or sfetch - smaller)
-#hfetch
-# install lolcat#sfetch | lolcat
 export nnn='NNN_TMPFILE='/tmp/.lastd' 'NNN_FCOLORS='ca7109a7f45cc91af9e87b00'
 source /home/discoople/.aliasrc
 
