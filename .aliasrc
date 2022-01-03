@@ -1,4 +1,10 @@
-alias s="sudo"
+# ------------------------------------ #
+# --- Discoople's .aliasrc ----------- #
+# ------------------------------------ #
+
+# Programs
+# ------------------------------------ 
+
 alias bt="btop"
 alias nc="ncmpcpp"
 alias pm="pulsemixer"
@@ -6,5 +12,28 @@ alias n="nnn -a -d -D -H -i -n -A"
 alias nm="neomutt"
 alias tt="tt -showwpm -notheme -blockcursor -bold"
 alias vi="nvim"
-alias htop="htop"
+
+# Behavior Shortcuts
+# ------------------------------------ 
+
+alias s="sudo"
+alias ls="ls --color=auto"
+alias ssn="sudo shutdown now"
+alias sr="sudo reboot"
+
+alias rmgitcache="rm -r ~/.cache/git"                                  #clear git cache 
+alias kc='killall conky'
+alias fix-permissions="sudo chown -R $USER:$USER ~/.config ~/.local"
 alias config='/usr/bin/git --git-dir=/home/discoople/.cfg/ --work-tree=/home/discoople'
+
+alias tobash="sudo chsh $USER -s /bin/bash && echo 'Now log out.'"     #switch to bash
+alias tozsh="sudo chsh $USER -s /bin/zsh && echo 'Now log out."        #switch to zsh
+
+alias paruskip="paru -S --mflags --skipinteg"                          #paruskip
+alias yayskip="yay -S --mflags --skipinteg"                            #yayskip
+alias trizenskip="trizen -S --skipinteg"                               #trizenskip
+
+alias microcode=" grep . /sys/devices/system/cpu/vulnerabilites/*"     #check vulnerabilites microcode
+
+alias gpg-check="gpg2 --keyserver-options auto-key-retrieve --verify"  #verify signature for isos
+alias gpg-retrieve="gpg2 --keyserver-options auto-key-retrieve --receive-keys" 
