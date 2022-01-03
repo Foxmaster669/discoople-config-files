@@ -12,9 +12,9 @@ export HISTCONTROL=ignoreboth:erasedups
 export EDITOR='neovim'
 export VISUAL='neovim'
 
-RED="\[$(tput setaf 196)\]"
-RESET="\[$(tput sgr0)\]"
-PS1="${RED} >]: ${RESET}"
+# Bash Prompt
+
+PS1='\[\e[0;3m\]\w \[\e[0;1m\]@\[\e[0;1;3m\]\u \[\e[0;4m\]>\[\e[0m\]]\[\e[0;1m\]: \[\e[0m\]'
 
 if [ -d "$HOME/.bin" ] ;
   then PATH="$HOME/.bin:$PATH"
