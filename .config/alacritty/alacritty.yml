@@ -1,66 +1,42 @@
-# --- Discoople's Very Basic Alacritty Config ---
+# ------------------------------------------------
+# --- Discoople's Gruvbox-Dark Alacritty Config---
+# ------------------------------------------------
 
-history: 10
+# --- Behavior
+# ------------------------------------------------
 
-# Font configuration
-font:
-  # Normal (roman) font face
-  normal:
-    # Font family
-    #
-    #Default:
-    #   - (macOS) Menlo
-    #   - (Linux/BSD) monospace
-    #   - (Windows) Consolas
-    family: hack
+window:
+  padding:
+    x: 10
+    y: 5
+  class:
+    instance: Alacritty
+    general: Alacritty
 
-    # The `style` can be specified to pick a specific face.
-    style: Regular
 
-  # Bold font face
-  bold:
-    # Font family
-    #
-    # If the bold family is not specified, it will fall back to the
-    # value specified for the normal font.
-    family: hack
+scrolling:
+  history: 10000
 
-    # The `style` can be specified to pick a specific face.
-    style: Bold
+env:
+  TERM: alacritty
+  LANG: "en_US.UTF-8"
+  LC_CTYPE: en_US.UTF-8
 
-  # Italic font face
-  italic:
-    # Font family
-    #
-    # If the italic family is not specified, it will fall back to the
-    # value specified for the normal font.
-    family: hack
+selection:
+  save_to_clipboard: true
 
-    # The `style` can be specified to pick a specific face.
-    style: Italic
+live_config_reload: true
 
-  # Bold italic font face
-  bold_italic:
-    # Font family
-    #
-    # If the bold italic family is not specified, it will fall back to the
-    # value specified for the normal font.
-    family: hack
+shell:
+  program: /usr/bin/bash
 
-    # The `style` can be specified to pick a specific face.
-    style: Bold Italic 
-
-  # Font size
-  size: 14.0
-
-  # Default colors
+# --- Colors/Appearence
+# ------------------------------------------------
+colors:
   primary:
-    # hard contrast: background = '#1d2021'
     background: '#282828'
-    # soft contrast: background = '#32302f'
     foreground: '#ebdbb2'
 
-  # Normal colors
   normal:
     black: '#282828'
     red: '#cc241d'
@@ -71,7 +47,6 @@ font:
     cyan: '#689d6a'
     white: '#a89984'
 
-  # Bright colors
   bright:
     black: '#928374'
     red: '#fb4934'
@@ -81,10 +56,33 @@ font:
     magenta: '#d3869b'
     cyan: '#8ec07c'
     white: '#ebdbb2'
-background_opacity: 0.5
 theme: Gruvbox-Dark
-shape: Block
-blinking: Off
-print_events: false
+background_opacity: 0.7
+gtk_theme_variant: dark
 
-# --- End --- #
+cursor:
+  style:
+    shape: block
+
+
+# --- Font
+# ------------------------------------------------
+
+font:
+  normal:
+    family: hack
+    style:  medium
+  bold:
+    family: hack
+    style: bold
+  italic:
+    family: hack
+    style: mediumitalic
+  bold_italic:
+    family: hack
+    style: bolditalic
+  size: 12.0
+
+  use_thin_strokes: true
+
+draw_bold_text_with_bright_colors: true
