@@ -1,4 +1,6 @@
 #!/bin/bash
+xinput --set-prop 'pointer:''ELECOM TrackBall Mouse HUGE TrackBall' 'libinput Accel Profile Enabled' 0, 1
+xinput --set-prop 'pointer:''ELECOM TrackBall Mouse HUGE TrackBall' 'libinput Accel Speed' -0.6
 
 xinput --set-prop 'pointer:''Razer Razer DeathAdder Elite' 'libinput Accel Profile Enabled' 0, 1 
 xinput --set-prop 'pointer:''Razer Razer DeathAdder Elite' 'libinput Accel Speed' -0.4
