@@ -34,3 +34,16 @@
  call plug#end()
  colorscheme gruvbox
  hi Normal guibg=None ctermbg=None
+
+"" --- Dvorak remap
+ noremap h h 
+ noremap t k
+ noremap n t
+ noremap s l
+ noremap l n
+ noremap L N
+
+ noremap - $
+ noremap _ ^
+"" ----------------------------------------
+
