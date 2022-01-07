@@ -36,9 +36,9 @@
  hi Normal guibg=None ctermbg=None
 
 "" --- Dvorak remap
- noremap h h 
- noremap t k
- noremap n t
+ noremap h h
+ noremap t j 
+ noremap n k
  noremap s l
  noremap l n
  noremap L N
