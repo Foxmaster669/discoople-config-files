@@ -37,8 +37,8 @@
 
 "" --- Dvorak remap
  noremap h h
- noremap t j 
- noremap n k
+ noremap t gj 
+ noremap n gk
  noremap s l
  noremap l n
  noremap L N
