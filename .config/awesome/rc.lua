@@ -228,13 +228,13 @@ root.buttons(gears.table.join(
 -- {{{ Key bindings
 globalkeys = gears.table.join(
 
-    awful.key({ modkey,           }, "n",
+    awful.key({ modkey,           }, "s",
         function ()
             awful.client.focus.byidx( 1)
         end,
         {description = "focus next by index", group = "client"}
     ),
-    awful.key({ modkey,           }, "t",
+    awful.key({ modkey,           }, "h",
         function ()
             awful.client.focus.byidx(-1)
         end,
@@ -242,22 +242,7 @@ globalkeys = gears.table.join(
     ),
 
     -- Layout manipulation
-
-    awful.key({ modkey, "Shift"   }, "space", function () awful.layout.inc(1 )        end,
-	          { description = "switch client layout", group = "layout"}), 
-
-    awful.key({ modkey, "Shift"   }, "j", function () awful.client.swap.byidx(  1)    end,
-              {description = "swap with next client by index", group = "client"}),
-
-    awful.key({ modkey, "Shift"   }, "k", function () awful.client.swap.byidx( -1)    end,
-              {description = "swap with previous client by index", group = "client"}),
-
-    awful.key({ modkey, "Control" }, "j", function () awful.screen.focus_relative( 1) end,
-              {description = "focus the next screen", group = "screen"}),
-
-    awful.key({ modkey, "Control" }, "k", function () awful.screen.focus_relative(-1) end,
-              {description = "focus the previous screen", group = "screen"}),
-
+-
     awful.key({ modkey,           }, "Tab",
         function ()
             awful.client.focus.history.previous()
