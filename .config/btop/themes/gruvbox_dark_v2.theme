@@ -1,0 +1,86 @@
+# Main background, empty for terminal default, need to be empty if you want transparent background
+theme[main_bg]=""
+
+# Main text color
+theme[main_fg]="#D79921"
+
+# Title color for boxes
+theme[title]="#FABD2F"
+
+# Highlight color for keyboard shortcuts
+theme[hi_fg]="#CC241D"
+
+# Background color of selected items
+theme[selected_bg]="#D3869B"
+
+# Foreground color of selected items
+theme[selected_fg]="#B16286"
+
+# Color of inactive/disabled text
+theme[inactive_fg]="#282828"  
+
+# Color of text appearing on top of graphs, i.e uptime and current network graph scaling
+theme[graph_text]="#83A598"
+
+# Misc colors for processes box including mini cpu graphs, details memory graph and details status text
+theme[proc_misc]="#FB4934"
+
+# Cpu box outline color
+theme[cpu_box]="#458588"
+
+# Memory/disks box outline color
+theme[mem_box]="#458588"
+
+# Net up/down box outline color
+theme[net_box]="#458588"
+
+# Processes box outline color
+theme[proc_box]="#458588"
+
+# Box divider line and small boxes line color
+theme[div_line]="#83A598"
+
+# Temperature graph colors
+theme[temp_start]="#98971A"
+theme[temp_mid]=""
+theme[temp_end]="#CC241D"
+
+# CPU graph colors
+theme[cpu_start]="#8EC07C"
+theme[cpu_mid]="#D79921"
+theme[cpu_end]="#CC241D"
+
+# Mem/Disk free meter
+theme[free_start]="#CC241D"
+theme[free_mid]="#D79921"
+theme[free_end]="#8EC07C"
+
+# Mem/Disk cached meter
+theme[cached_start]="#458588"
+theme[cached_mid]="#83A598"
+theme[cached_end]="#8EC07C"
+
+# Mem/Disk available meter
+theme[available_start]="#CC241D"
+theme[available_mid]="#D65D0E"
+theme[available_end]="#FABD2F"
+
+# Mem/Disk used meter
+theme[used_start]="#8EC07C"
+theme[used_mid]="#D65D0E"
+theme[used_end]="#CC241D"
+
+# Download graph colors
+theme[download_start]="#98971A"
+theme[download_mid]="#689d6A"
+theme[download_end]="#B8BB26"
+
+# Upload graph colors
+theme[upload_start]="#CC241D"
+theme[upload_mid]="#D65d0E"
+theme[upload_end]="#FABF2F"
+
+# Process box color gradient for threads, mem and cpu usage
+theme[process_start]="#458588"
+theme[process_mid]="#689D6A"
+theme[process_end]="#FADB2F"
