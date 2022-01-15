@@ -3,18 +3,10 @@
 # --------------------------- #
 
 # If not running interactively, don't do anything
+
 [[ $- != *i* ]] && return
 
 export HISTCONTROL=ignoreboth:erasedups
-
-# Make Neovim the default editor
-
-export EDITOR='neovim'
-export VISUAL='neovim'
-
-# Bash Prompt
-
-PS1='\[\e[0;3m\]\w \[\e[0;1m\]@\[\e[0;1;3m\]\u \[\e[0;4m\]>\[\e[0m\]]\[\e[0;1m\]: \[\e[0m\]'
 
 if [ -d "$HOME/.bin" ] ;
   then PATH="$HOME/.bin:$PATH"
@@ -24,6 +16,14 @@ if [ -d "$HOME/.local/bin" ] ;
   then PATH="$HOME/.local/bin:$PATH"
 fi
 
+#ignore upper and lowercase when TAB completion
+bind "set completion-ignore-case on"
+
+
+
+# Bash Prompt
+
+PS1='\[\e[0;3m\]\w \[\e[0;1m\]@\[\e[0;1;3m\]\u \[\e[0;4m\]>\[\e[0m\]]\[\e[0;1m\]: \[\e[0m\]'
 #ignore upper and lowercase when TAB completion
 bind "set completion-ignore-case on"
 
@@ -64,8 +64,10 @@ ex ()
 
 [[ -f ~/.bashrc-personal ]] && . ~/.bashrc-personal
 
+date "+%Y %b %d (%a) %I:%M%p" #display date upon launch
+neofetch
+
 export nnn='NNN_TMPFILE='/tmp/.lastd' 'NNN_FCOLORS='ca7109a7f45cc91af9e87b00'
 source /home/discoople/.aliasrc
-
 
 

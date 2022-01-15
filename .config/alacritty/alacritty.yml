@@ -4,7 +4,6 @@
 
 # --- Behavior
 # ------------------------------------------------
-
 window:
   padding:
     x: 10
@@ -12,7 +11,6 @@ window:
   class:
     instance: Alacritty
     general: Alacritty
-
 
 scrolling:
   history: 10000
@@ -33,10 +31,14 @@ shell:
 # --- Colors/Appearence
 # ------------------------------------------------
 colors:
+  # Default colors
   primary:
+    # hard contrast: background = '#1d2021'
     background: '#282828'
-    foreground: '#ebdbb2'
+    # soft contrast: background = '#32302f'
+    foreground: '#d79921'
 
+  # Normal colors
   normal:
     black: '#282828'
     red: '#cc241d'
@@ -47,6 +49,7 @@ colors:
     cyan: '#689d6a'
     white: '#a89984'
 
+  # Bright colors
   bright:
     black: '#928374'
     red: '#fb4934'
@@ -56,22 +59,21 @@ colors:
     magenta: '#d3869b'
     cyan: '#8ec07c'
     white: '#ebdbb2'
+
 theme: Gruvbox-Dark
-background_opacity: 0.7
+background_opacity: 0.75
 gtk_theme_variant: dark
 
 cursor:
   style:
     shape: block
 
-
 # --- Font
 # ------------------------------------------------
-
 font:
   normal:
     family: hack
-    style:  medium
+    style: bold
   bold:
     family: hack
     style: bold

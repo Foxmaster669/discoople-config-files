@@ -21,7 +21,6 @@ alias ls="ls --color=auto"
 alias ssn="sudo shutdown now"
 alias sr="sudo reboot"
 
-alias rmgitcache="rm -r ~/.cache/git"                                  #clear git cache 
 alias kc='killall conky'
 alias fix-permissions="sudo chown -R $USER:$USER ~/.config ~/.local"
 alias config='/usr/bin/git --git-dir=/home/discoople/.cfg/ --work-tree=/home/discoople'
