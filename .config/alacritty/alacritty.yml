@@ -61,8 +61,7 @@ colors:
     white: '#ebdbb2'
 
 theme: Gruvbox-Dark
-background_opacity: 0.75
-gtk_theme_variant: dark
+background_opacity: 0.7
 
 cursor:
   style:

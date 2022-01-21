@@ -64,7 +64,8 @@ ex ()
 
 [[ -f ~/.bashrc-personal ]] && . ~/.bashrc-personal
 
-date "+%Y %b %d (%a) %I:%M%p" #display date upon launch
+# date "+%Y %b %d (%a) %I:%M%p" #display date upon launch
+
 neofetch
 
 export nnn='NNN_TMPFILE='/tmp/.lastd' 'NNN_FCOLORS='ca7109a7f45cc91af9e87b00'

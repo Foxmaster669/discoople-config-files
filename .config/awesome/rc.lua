@@ -295,8 +295,9 @@ globalkeys = gears.table.join(
     -- Rofi
 
     awful.key({ modkey},            "space",     function ()
-awful.spawn.with_shell("rofi -matching fuzzy -show drun -mode drun") 
-end,
+awful.spawn.with_shell("rofi -matching fuzzy -show drun -mode drun")
+end, 
+
               {description = "run prompt", group = "launcher"}),
 
     awful.key({ modkey }, "x",

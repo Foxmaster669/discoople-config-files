@@ -19,7 +19,7 @@ alias vi="nvim"
 alias s="sudo"
 alias ls="ls --color=auto"
 alias ssn="sudo shutdown now"
-alias sr="sudo reboot"
+alias sr="sudo shutdown now -r"
 
 alias kc='killall conky'
 alias fix-permissions="sudo chown -R $USER:$USER ~/.config ~/.local"
