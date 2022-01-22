@@ -16,12 +16,16 @@
  syntax on
  
  set ttyfast "" - fast scroll speed
- 
+                                                                                 
  "" --- Search settings
  set hlsearch "" - highlight matching search patterns
  set incsearch "" - incremental search
  set ignorecase "" - include matching uppercase & lowercase words in search
  set smartcase "" - include only uppercase words w/ uppercase search term
+ set laststatus=0 "" - always display the status line
+ set encoding=utf-8 "" - display encoding
+ set smartindent "" - makes indenting smart
+ set autoindent "" - good auto indenting
 "" ----------------------------------------
  
  set noswapfile "" - disables swap files
