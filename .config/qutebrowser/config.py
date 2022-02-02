@@ -8,26 +8,45 @@
 
 c.bindings.commands['normal'] = {
         # Navigation Binds
-        'h'  : 'scroll left',
-        't'  : 'scroll down',
-        'n'  : 'scroll up',
-        's'  : 'scroll right',
-        'H'  : 'back',
-        'N'  : 'tab-next',
-        'T'  : 'tab-prev',
-        'S'  : 'forward',
-        'gg' : 'scroll-to-perc 0',
-        'G'  : 'scroll-to-perc 100'
-
-
-
+        'h'       : 'scroll left',
+        't'       : 'scroll down',
+        'n'       : 'scroll up',
+        's'       : 'scroll right',
+        'H'       : 'back',
+        'N'       : 'tab-next',
+        'T'       : 'tab-prev',
+        'S'       : 'forward',
+        'gg'      : 'scroll-to-perc 0',
+        'G'       : 'scroll-to-perc 100'
         }
+
+c.url.searchengines = {
+        # Search Binds
+        # Thank you, Uver 
+
+        "DEFAULT" : "https://searx.be/?q={}",
+        "aur"     : "https://archlinux.org/packages/?q={}",
+        "aw"      : "https://wiki.archlinux.org/index.php?search={}",
+        "b"       : "https://search.brave.com/search?q={}",
+        "d"       : "https://duckduckgo.com/?q={}&ia=web",
+        "dz"      : "https://www.deezer.com/search/{}",
+        "g"       : "https://google.com/search?q={}",
+        "gh"      : "https://github.com/search?q={}&ref=opensearch",
+        "o"       : "https://odysee.com/$/search?q={}",
+        "s"       : "https://searx.bar/search?q={}",
+        "sp"      : "https://open.spotify.com/search/{}",
+        "t"       : "https://translate.yandex.com/?text={}",
+        "tt"      : "https://didoesdigital.com/typey-type/lookup?q={}",
+        "y"       : "https://www.youtube.com/results?search_query={}",
+        "w"       : "https://wiby.me/?q={}",
+     }
+     
 
 # -----------------------------------------------
 # --- Behavior (Cookies, JS, Notifs, etc...) 
 # -----------------------------------------------
 
-config.source('gruvbox.py')
+config.source('gruvbox.py') # Theme Source
 
 config.load_autoconfig(False)
 
@@ -81,11 +100,8 @@ c.url.default_page = 'about:blank'
 # Type: Dict
 c.url.searchengines = {'DEFAULT': 'https://searx.be/?q={}'}
 
-# Page(s) to open at the start.
-# Type: List of FuzzyUrl, or FuzzyUrl
 c.url.start_pages = 'about:blank'
 
-# Type: Bool
 c.window.transparent = True
 
 # Default zoom level.
