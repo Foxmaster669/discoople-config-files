@@ -37,5 +37,4 @@ fi
 # -----------------------------------------------
 
 setxkbmap -layout us -variant dvorak #keyboard layout
-
 xset r rate 260 30 #character enter speed/delay

@@ -2,6 +2,7 @@
 # //////////////
 # Server
 # /////////////
+
 mpd_host = "~/.local/state/mpd/socket"
 mpd_port = "6600"
 mpd_music_dir = "~/Music"
@@ -30,9 +31,9 @@ display_remaining_time = yes
 titles_visibility = yes
 clock_display_seconds = yes 
 lines_scrolled = 1
-startup_screen = media_library
-startup_slave_screen = "playlist" 
-startup_slave_screen_focus = no
+startup_screen = playlist
+startup_slave_screen = "media_library" 
+#startup_slave_screen_focus = no
 
 header_visibility = yes
 
@@ -77,8 +78,8 @@ visualizer_color = 47, 83, 119, 155, 191, 227, 221, 215, 209, 203, 197, 161
 # ///////////
 
 colors_enabled = yes
-color1 = 2
-color2 = 2
+color1 = 4
+color2 = 4
 empty_tag_color = 2
 volume_color = 3
 state_line_color = 7

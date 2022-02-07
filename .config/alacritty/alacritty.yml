@@ -60,9 +60,8 @@ colors:
     cyan: '#8ec07c'
     white: '#ebdbb2'
 
+background_opacity: 0.8
 theme: Gruvbox-Dark
-background_opacity: 0.7
-
 cursor:
   style:
     shape: block
