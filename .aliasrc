@@ -8,7 +8,6 @@
 alias bt="btop"
 alias nc="ncmpcpp"
 alias pm="pulsemixer"
-alias n="nnn -a -d -D -H -i -n -A"
 alias nm="neomutt"
 alias tt="tt -showwpm -notheme -blockcursor -bold"
 alias vi="nvim"

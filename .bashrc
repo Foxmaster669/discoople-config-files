@@ -68,7 +68,6 @@ ex ()
 
 neofetch
 
-export nnn='NNN_TMPFILE='/tmp/.lastd' 'NNN_FCOLORS='ca7109a7f45cc91af9e87b00'
 source /home/discoople/.aliasrc
 
 
