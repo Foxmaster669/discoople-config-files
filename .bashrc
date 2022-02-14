@@ -22,11 +22,7 @@ bind "set completion-ignore-case on"
 
 
 # Bash Prompt
-
-PS1='\[\e[0;3m\]\w \[\e[0;1m\]@\[\e[0;1;3m\]\u \[\e[0;4m\]>\[\e[0m\]]\[\e[0;1m\]: \[\e[0m\]'
-#ignore upper and lowercase when TAB completion
-bind "set completion-ignore-case on"
-
+PS1='\[\e[0;3;38;5;78m\]\w \[\e[0;1m\]@\[\e[0;1;3;38;5;160m\]\u \[\e[0;4m\]>\[\e[0m\]]\[\e[0;1m\]: \[\e[0m\]'
 #shopt
 shopt -s autocd # change to named directory
 shopt -s cdspell # autocorrects cd misspellings
