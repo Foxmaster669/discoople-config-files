@@ -243,7 +243,7 @@ globalkeys = gears.table.join(
 
     -- Layout manipulation
 
-    awful.key({ altkey, "Shift"   }, "space", function () awful.layout.inc(1 )        end,
+    awful.key({ "Control",  "Shift"   }, "space", function () awful.layout.inc(1 )        end,
 	          { description = "switch client layout", group = "layout"}), 
 
     awful.key({ altkey, "Shift"   }, "j", function () awful.client.swap.byidx(  1)    end,

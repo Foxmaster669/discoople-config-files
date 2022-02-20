@@ -78,8 +78,8 @@ visualizer_color = 47, 83, 119, 155, 191, 227, 221, 215, 209, 203, 197, 161
 # ///////////
 
 colors_enabled = yes
-color1 = 4
-color2 = 4
+color1 = yellow
+color2 = yellow
 empty_tag_color = 2
 volume_color = 3
 state_line_color = 7
