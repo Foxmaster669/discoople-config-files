@@ -20,6 +20,7 @@ alias ls="ls --color=auto"
 alias ssn="sudo shutdown now"
 alias sr="sudo shutdown now -r"
 
+alias kb='killall polybar; polybar bar'
 alias kc='killall conky'
 alias fix-permissions="sudo chown -R $USER:$USER ~/.config ~/.local"
 alias config='/usr/bin/git --git-dir=/home/discoople/.cfg/ --work-tree=/home/discoople'
