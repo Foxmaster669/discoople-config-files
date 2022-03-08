@@ -52,6 +52,7 @@ beautiful.init("/home/discoople/.config/awesome/theme.lua")
 
 -- Default Programs/Start Programs
 
+awful.spawn.with_shell("polybar bar")
 awful.spawn.with_shell("picom")
 awful.spawn.with_shell("nitrogen --restore --set-zoom-fill")
 awful.spawn.with_shell("~/.config/awesome/autosettings.sh")
