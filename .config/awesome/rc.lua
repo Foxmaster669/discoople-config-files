@@ -52,7 +52,7 @@ beautiful.init("/home/discoople/.config/awesome/theme.lua")
 
 -- Default Programs/Start Programs
 
-awful.spawn.with_shell("polybar bar")
+-- awful.spawn.with_shell("polybar bar")
 awful.spawn.with_shell("picom")
 awful.spawn.with_shell("nitrogen --restore --set-zoom-fill")
 awful.spawn.with_shell("~/.config/awesome/autosettings.sh")
@@ -299,22 +299,11 @@ globalkeys = gears.table.join(
 awful.spawn.with_shell("rofi -matching fuzzy -show drun -mode drun")
 end, 
 
-              {description = "run prompt", group = "launcher"}),
-
-    awful.key({ modkey }, "x",
-              function ()
-                  awful.prompt.run {
-                    prompt       = "Run Lua code: ",
-                    textbox      = awful.screen.focused().mypromptbox.widget,
-                    exe_callback = awful.util.eval,
-                    history_path = awful.util.get_cache_dir() .. "/history_eval"
-                  }
-              end,
-              {description = "lua execute prompt", group = "awesome"}),
  -- Menubar
     awful.key({ modkey}, "p", function() menubar.show() end,
               {description = "show the menubar", group = "launcher"})
 
+              )
 )
 
 
