@@ -1,36 +1,55 @@
+---------------------------
+-- Discoople's AwesomeWM --
+---------------------------
+
+---------------------------
+-- Libraries             --
+---------------------------
+
 pcall(require, "luarocks.loader")
-
--- Standard awesome library
-
-local theme_assets = require("beautiful.theme_assets")
-local xresources   = require("beautiful.xresources")
-local dpi          = xresources.apply_dpi
-local gfs          = require("gears.filesystem")
-local themes_path  = gfs.get_themes_dir()
-local theme        = {}
-
-local gears = require("gears")
-local awful = require("awful")
 require("awful.autofocus")
-local wibox = require("wibox")
-local beautiful = require("beautiful")
-local naughty = require("naughty")
-local menubar = require("menubar")
-local hotkeys_popup = require("awful.hotkeys_popup")
--- Enable hotkeys help widget for VIM and other apps
--- when client with a matching name is opened:
 require("awful.hotkeys_popup.keys")
+local theme_assets  = require("beautiful.theme_assets")
+local xresources    = require("beautiful.xresources")
+local dpi           = xresources.apply_dpi
+local gfs           = require("gears.filesystem")
+local themes_path   = gfs.get_themes_dir()
+local theme         = {}
+local gears         = require("gears")
+local awful         = require("awful")
+local wibox         = require("wibox")
+local beautiful     = require("beautiful")
+local naughty       = require("naughty")
+local menubar       = require("menubar")
+local hotkeys_popup = require("awful.hotkeys_popup")
 
--- {{{ Error handling
--- Check if awesome encountered an error during startup and fell back to
--- another config (This code will only ever execute for the fallback config)
+---------------------------
+-- Defaults/Spawns       --
+---------------------------
+
+awful.spawn.with_shell("picom")
+awful.spawn.with_shell("nitrogen --restore --set-zoom-fill")
+awful.spawn.with_shell("~/.config/awesome/autosettings.sh")
+local modkey = "Mod4"
+local altkey = "Mod1"
+local terminal = "alacritty"
+local vi_focus = false
+local cycle_prev = true
+local editor = os.getenv("nvim") or "nvim"
+local browser = "qutebrowser"
+editor_cmd = terminal .. " -e " .. editor
+beautiful.init("/home/discoople/.config/awesome/theme.lua")
+
+---------------------------
+-- Error Handling        --
+---------------------------
+
 if awesome.startup_errors then
     naughty.notify({ preset = naughty.config.presets.critical,
                      title = "Oops, there were errors during startup!",
                      text = awesome.startup_errors })
 end
 
--- Handle runtime errors after startup
 do
     local in_error = false
     awesome.connect_signal("debug::error", function (err)
@@ -44,39 +63,22 @@ do
         in_error = false
     end)
 end
--- }}}
 
--- {{{ Variable definitions
--- Themes define colours, icons, font and wallpapers.
-beautiful.init("/home/discoople/.config/awesome/theme.lua")
+---------------------------
+-- Layouts               --
+---------------------------
 
--- Default Programs/Start Programs
-
--- awful.spawn.with_shell("polybar bar")
-awful.spawn.with_shell("picom")
-awful.spawn.with_shell("nitrogen --restore --set-zoom-fill")
-awful.spawn.with_shell("~/.config/awesome/autosettings.sh")
-local modkey = "Mod4"
-local altkey = "Mod1"
-local terminal = "alacritty"
-local vi_focus = false
-local cycle_prev = true
-local editor = os.getenv("nvim") or "nvim"
-local browser = "qutebrowser"
-editor_cmd = terminal .. " -e " .. editor
-
--- }}}
-
--- Table of layouts to cover with awful.layout.inc, order matters.
 awful.layout.layouts = {
       awful.layout.suit.tile,
       awful.layout.suit.tile.left,
       awful.layout.suit.floating,
 }
--- }}}
 
--- {{{ Menu
--- Create a launcher widget and a main menu
+---------------------------
+-- Menu                  --
+---------------------------
+
+
 myawesomemenu = {
    { "hotkeys", function() hotkeys_popup.show_help(nil, awful.screen.focused()) end },
    { "manual", terminal .. " -e man awesome" },
@@ -187,32 +189,30 @@ awful.screen.connect_for_each_screen(function(s)
     s.mywibox = awful.wibar({
 
     position = "top",
-    width = 163,
+    width = 1880,
     height = 15,
     border_width = 4,
-    border_color = "#458588",
-    visible = false,
+    border_color = "#cc241d",
+    visible = true,
     type = dock,
-    bg = "#FF000000",
+    bg = "#28282899",
     opacity = 1.0,
     screen = s })
 
-    -- Add widgets to the wibox
     s.mywibox:setup {
         layout = wibox.layout.align.horizontal,
-      { -- Left widgets
+        {
             layout = wibox.layout.fixed.horizontal,
-          --   mylauncher,
-             s.mytaglist,
-          -- s.mypromptbox,
+            s.mypromptbox,
         },
-          -- s.mytasklist, -- Middle widget
-        { -- Right widgets
-              layout = wibox.layout.fixed.horizontal,
-          --    mykeyboardlayout,
-              wibox.widget.systray(),
-          --    mytextclock,
-          --  s.mylayoutbox,
+            s.mytasklist,   -- Seperator
+        {
+            layout = wibox.layout.fixed.horizontal,
+            s.mytaglist,
+            mykeyboardlayout,
+            wibox.widget.systray(),
+            mytextclock,
+            s.mylayoutbox,
         },
     }
 end)
@@ -351,9 +351,6 @@ clientkeys = gears.table.join(
         {description = "(un)maximize horizontally", group = "client"})
 )
 
--- Bind all key numbers to tags.
--- Be careful: we use keycodes to make it work on any keyboard layout.
--- This should map on the top row of your keyboard, usually 1 to 9.
 for i = 1, 9 do
     globalkeys = gears.table.join(globalkeys,
         -- View tag only.
